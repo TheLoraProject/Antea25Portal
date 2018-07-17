@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2" style="padding-bottom:0px !important">
+  <a class='navbar-brand' (click)="clearCache();"><img src="../../assets/images/LoRaWAN.png" alt="LogoEcdc" class="navbar-left" width="100"></a>
+  <a class='navbar-brand' [routerLink]="['/home']" style="font-size:xx-large;color:white;margin-top:15px">Antea25</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="margin-top:32px !important;">
+
+      <li class="navbar-divider-vertical hidden-sm hidden-md hidden-xs"></li>
+      <li class="nav-item active" [routerLinkActive]="['link-active']">
+        <a class="nav-link" [routerLink]="['/project']">
+          <i aria-hidden="true"></i> Home
+        </a>
+      </li>
+
+      <li class="navbar-divider-vertical hidden-sm hidden-md hidden-xs"></li>
+      <li class="nav-item active" [routerLinkActive]="['link-active']">
+        <a class="nav-link" [routerLink]="['/project']">
+          <i aria-hidden="true"></i> My devices
+        </a>
+      </li>
+
+      <li class="navbar-divider-vertical hidden-sm hidden-md hidden-xs"></li>
+      <li class="nav-item active" [routerLinkActive]="['link-active']">
+        <a class="nav-link" [routerLink]="['/project']">
+          <i aria-hidden="true"></i> Track me
+        </a>
+      </li>
+
+      <li class="navbar-divider-vertical hidden-sm hidden-md hidden-xs"></li>
+      <li class="nav-item active" [routerLinkActive]="['link-active']">
+        <a class="nav-link" [routerLink]="['/project']">
+          <i aria-hidden="true"></i> About
+        </a>
+      </li>
+
+      <li class="navbar-divider-vertical hidden-sm hidden-md hidden-xs"></li>
+      <li class="nav-item active" [routerLinkActive]="['link-active']">
+        <a class="nav-link" [routerLink]="['/project']">
+          <i aria-hidden="true"></i> Contact
+        </a>
+      </li>
+    </ul>
+
+    <div style="color:white;font-size:small" class="hidden-md">
+      <div>
+        {{userProfile?.userFullName}}
+        <a id="userProfile" tabindex="0" value="" data-toggle="popover" title="My profile" data-placement="bottom" data-trigger="focus" style="cursor:pointer">
+          <i id="profileIcon" style="color:darkorange;font-size:1.2em" class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Show my profile"></i>
+        </a>
+        <span *ngIf="userProfile == null"><em>Hello sebastien.dubos@gmail.com!</em></span>
+        <span *ngIf="userProfile == null" style="margin-left:30px"><em>Log out</em></span>
+        <span *ngIf="userProfile != null">| Register</span>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
